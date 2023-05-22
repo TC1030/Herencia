@@ -10,11 +10,10 @@ Resolver situaciones reales empleando los conceptos de herencia, modificadores d
 ## Ejecución
 
 El programa debe ejecutarse correctamente, deberás probar la creación de distintos objetos y usar sus métodos para comprobar que todo trabaja adecuadamente.
-```
+
 
 ## Diagrama de Clases
 
-```mermaid
 ```mermaid
 classDiagram
     Envio *-- Persona
