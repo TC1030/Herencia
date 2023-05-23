@@ -16,7 +16,7 @@ El programa debe ejecutarse correctamente, deberás probar la creación de disti
 
 ```mermaid
 classDiagram
-    Envio *-- Persona
+    Envio o-- Persona
     Envio <|-- Sobre
     Envio <|-- Paquete
       class Persona {
