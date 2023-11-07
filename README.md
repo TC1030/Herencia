@@ -72,10 +72,10 @@ classDiagram
 
 ## Instrucciones
 
-Deberás modificar los archivos `Persona.cpp` `Envio.cpp` `Paquete.cpp` `Sobre.cpp` de aacuerdo a las siguientes instrucciones:
+Deberás modificar los archivos `Persona.cpp` `Envio.cpp` `Paquete.cpp` `Sobre.cpp` de acuerdo a las siguientes instrucciones:
 - Una jerarquía de herencia para representar los diferentes tipos de paquetes. Tendremos la clase Envio como clase base de la jerarquía, luego incluye las clases Sobre y Paquete derivadas de Envio.
 
-- Antes, para manejar el remitente y destinatario deberás construir una clase Persona que contenga los datos: nombre, ciudad y código postal. En el constructor por default inicia los 3 strings en "-". Incluye un método imprime que despliegue los datos en el siguiente formato:
+- Antes, para manejar el remitente y destinatario deberás construir una clase Persona que contenga los datos: nombre, ciudad y código postal (en ese orden en el constructor). En el constructor por default inicia los 3 strings en "-". Incluye un método imprime que despliegue los datos en el siguiente formato:
 ´´´Nombre: nombre completo
 Dirección: Ciudad CodigoPostal
 
@@ -86,11 +86,11 @@ Ejemplo:
 Nombre: Patricia Rosas
 Dirección: Tlajomulco 45645´´´
 
-- La clase base **Envio** debe incluir datos del remitente y el destinatario del envío . El constructor de la clase **Envio** debe iniciar estos valores en los datos miembros. El costo estándar será una constante de clase, es un valor double.
+- La clase base **Envio** debe incluir datos del remitente y el destinatario del envío (en ese orden en el constructor) . El constructor de la clase **Envio** debe iniciar estos valores en los datos miembros. El costo estándar será una constante de clase, es un valor double.
 
 - La clase **Envio** debe proporcionar una función miembro **calculaCosto** que devuelve un valor double indicando el costo asociado con el envío del paquete, que en esta clase corresponde directamente al costo estándar.
 
-- La Clase Derivada **Paquete** debe heredar la funcionalidad de la clase base **Envio**, pero también debe incluir datos miembros que representan peso, ancho, largo y profundidad. El costo por kilogramo (tipo double) será una constante estática de clase.
+- La Clase Derivada **Paquete** debe heredar la funcionalidad de la clase base **Envio**, pero también debe incluir datos miembros que representan peso, ancho, largo y profundidad (en ese orden en el constructor después de remitente y destinatario). El costo por kilogramo (tipo double) será una constante estática de clase.
 
 - El constructor con parámetros de la clase **Paquete** debe recibir estos valores para iniciar los datos miembro. Asegúrate de que el peso, ancho, largo, profundidad contengan valores positivos, si no, se les asignará un 0. En el constructor por default inícialos a 0. 
 
@@ -98,7 +98,7 @@ Dirección: Tlajomulco 45645´´´
 
 - - La función **imprime** de Paquete deberá imprimir los datos base del envio y los datos del paquete (datos de sus medidas, peso y costo)
 
-- La clase **Sobre** debe heredar directamente de la clase **Envio**, debe contar con los datos de largo y ancho del sobre.  Si las dimensiones del sobre exceden de 25cm en largo y en 30 en ancho, se agregue un cargo adicional (éste dato será una constante estática de clase). Largo, ancho y cargo adicional son valores double.
+- La clase **Sobre** debe heredar directamente de la clase **Envio**, debe contar con los datos de ancho y largo del sobre (en ese orden en el constructor, después de remitente y destinatario).  Si las dimensiones del sobre exceden de 25cm en largo y en 30 en ancho, se agregue un cargo adicional (éste dato será una constante estática de clase). Largo, ancho y cargo adicional son valores double.
 
 - La función **calculaCosto** de Sobre deberá entonces cobrar cargo adicional si se exceden las dimensiones como se comentó anteriormente, si no, simplemente tendrá el costo estándar.
 
